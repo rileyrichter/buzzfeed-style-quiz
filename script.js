@@ -1,24 +1,5 @@
 const resultsButton = document.querySelector("#resultsbutton");
-
-const questionOne = document
-  .querySelector("#questionOne")
-  .querySelectorAll("a");
-const questionTwo = document
-  .querySelector("#questionTwo")
-  .querySelectorAll("a");
-const questionThree = document
-  .querySelector("#questionThree")
-  .querySelectorAll("a");
-const questionFour = document
-  .querySelector("#questionFour")
-  .querySelectorAll("a");
-
-let allQuestions = Array.prototype.concat.call(
-  ...questionOne,
-  ...questionTwo,
-  ...questionThree,
-  ...questionFour
-);
+const allQuestions = document.querySelectorAll(".answer-wrapper");
 
 window.addEventListener("load", (event) => {
   allQuestions.forEach((question) => {
