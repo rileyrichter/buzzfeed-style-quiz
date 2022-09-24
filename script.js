@@ -46,11 +46,9 @@ window.onload = (event) => {
   });
   // Find out if prefers reduced motion is on
   // and log that to the console
-  if (motionState.matches === true) {
-    console.log("Reduce motion is on");
-  } else {
-    console.log("Reduce motion is off");
-  }
+  !0 === motionState.matches
+    ? console.log("Reduce motion is on")
+    : console.log("Reduce motion is off");
   getStats();
 };
 
@@ -175,11 +173,9 @@ function fadeOut(e) {
 // users reduce motion preference.
 // Always think about accessibility!
 function respectMotionPreference(e) {
-  if (motionState.matches === true) {
-    e.scrollIntoView({ block: "start" });
-  } else {
-    e.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  !0 === motionState.matches
+    ? e.scrollIntoView({ block: "start" })
+    : e.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // Scroll to question two
