@@ -149,6 +149,12 @@ function getCharacter() {
       respectMotionPreference(resultArea);
       // Fade in the button to retake the quiz
       fadeIn(againButton);
+      // Focus on the results wrapper --
+      // we do this to make sure results are
+      // easily accessible for folks using a
+      // screenreader
+      resultWrapper.setAttribute("tabindex", "-1");
+      resultWrapper.focus();
     });
 }
 
