@@ -147,8 +147,6 @@ function getCharacter() {
       fadeIn(resultWrapper);
       // Scroll to results
       respectMotionPreference(resultArea);
-      // Fade in the button to retake the quiz
-      fadeIn(againButton);
       // Focus on the results wrapper --
       // we do this to make sure results are
       // easily accessible for folks using a
