@@ -158,7 +158,6 @@ function getCharacter() {
 
 // Function to fade an element in
 function fadeIn(e) {
-  console.log(e.parentElement);
   e.parentElement.style.display = "block";
   setTimeout(() => {
     e.classList.remove("fade");
