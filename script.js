@@ -28,7 +28,6 @@ window.onload = (event) => {
   tweetButton.addEventListener("click", tweetClick);
   // bind the doItAgain() function to the againButton
   againButton.addEventListener("click", doItAgain);
-
   // Get all the list items in question one
   // bind the toQuestionTwo() function to it
   questionOneItems.forEach((item) => {
@@ -52,16 +51,14 @@ window.onload = (event) => {
   getStats();
 };
 
-Webflow.push(function () {
-  // DOMready has fired
-  // May now use jQuery and Webflow api
-  // When someone submits our form
-  // prevent the default behavior and
-  // run the getCharacter() function instead
-  $("#quiz-form").submit(function () {
-    getCharacter();
-    return false;
-  });
+// Prevent the form from submitting
+// so we can make our API call
+// Side note: I normally don't use jQuery
+// but this method is easiest when working
+// with forms in Webflow and jQuery
+$("#quiz-form").submit(function () {
+  getCharacter();
+  return false;
 });
 
 function getCharacter() {
