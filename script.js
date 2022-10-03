@@ -253,16 +253,16 @@ function getStats() {
     .then(handleError)
     // If there is no error, let's work with the data
     .then((data) => {
-      data.forEach((character) => {
+      data.rows.forEach((row) => {
         // Set variables bases on the results from Airtable
-        const chNumber = character.fields["Count (quiz)"];
-        const chRollup = character.fields.Rollup;
+        const chNumber = row.fields["Count (quiz)"];
+        const chRollup = row.fields.Rollup;
         // Use our percentage function to calculate results
         const percentageResult = percentage(chNumber, chRollup);
         // Make a copy of the cell in the hidden div
         const newCell = overviewCell.cloneNode(true);
         // Pass the values through to the elements
-        newCell.querySelector("#name").innerText = character.fields.Name;
+        newCell.querySelector("#name").innerText = row.fields.Name;
         newCell.querySelector("#percent").innerText = percentageResult;
         // Add the cell to the grid
         overviewGrid.appendChild(newCell);
