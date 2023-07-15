@@ -97,7 +97,7 @@ function getCharacter() {
     document.querySelector('input[name="four"]:checked').value
   );
   // Start our fetch (API call) the URL is our endpoint
-  fetch("https://bparker.api.stdlib.com/lasso-quiz-new@dev/", {
+  fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/results", {
     // Define our method and headers
     method: "POST",
     headers: {
@@ -241,7 +241,7 @@ function getStats() {
   };
 
   // Start our fetch (API call) the URL is our endpoint
-  fetch("https://bparker.api.stdlib.com/lasso-quiz-new@dev/airtable", {
+  fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/characters", {
     // Define our method and headers
     method: "GET",
     headers: {
@@ -253,7 +253,7 @@ function getStats() {
     .then(handleError)
     // If there is no error, let's work with the data
     .then((data) => {
-      data.rows.forEach((row) => {
+      data.forEach((row) => {
         // Set variables bases on the results from Airtable
         const chNumber = row.fields["Count (quiz)"];
         const chRollup = row.fields.Rollup;
