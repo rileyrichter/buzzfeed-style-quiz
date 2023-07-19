@@ -97,6 +97,8 @@ function getCharacter() {
     document.querySelector('input[name="four"]:checked').value
   );
   // Start our fetch (API call) the URL is our endpoint
+  // Update this to your own endpoint, currently I'm using
+  // a free Heroku instance, but started with Autocode
   fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/results", {
     // Define our method and headers
     method: "POST",
@@ -241,6 +243,8 @@ function getStats() {
   };
 
   // Start our fetch (API call) the URL is our endpoint
+  // Update this to your own endpoint, currently I'm using
+  // a free Heroku instance, but started with Autocode
   fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/characters", {
     // Define our method and headers
     method: "GET",
