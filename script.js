@@ -99,7 +99,9 @@ function getCharacter() {
   // Start our fetch (API call) the URL is our endpoint
   // Update this to your own endpoint, currently I'm using
   // a free Heroku instance, but started with Autocode
-  fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/results", {
+  // https://evening-cliffs-78579-4a45c9775734.herokuapp.com/results
+  // https://buzzfeed-ac-replace-production.up.railway.app/results
+  fetch("https://buzzfeed-ac-replace-production.up.railway.app/results", {
     // Define our method and headers
     method: "POST",
     headers: {
@@ -245,7 +247,8 @@ function getStats() {
   // Start our fetch (API call) the URL is our endpoint
   // Update this to your own endpoint, currently I'm using
   // a free Heroku instance, but started with Autocode
-  fetch("https://evening-cliffs-78579-4a45c9775734.herokuapp.com/characters", {
+  // https://buzzfeed-ac-replace-production.up.railway.app/characters
+  fetch("https://buzzfeed-ac-replace-production.up.railway.app/characters", {
     // Define our method and headers
     method: "GET",
     headers: {
